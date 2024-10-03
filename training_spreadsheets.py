@@ -5,7 +5,7 @@ import os
 from dotenv import load_dotenv
 from google.oauth2.service_account import Credentials
 from googleapiclient import discovery
-from constants import SCOPES
+from travel_budget.constants import SCOPES
 
 
 load_dotenv()

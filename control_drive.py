@@ -5,9 +5,7 @@ import os
 from dotenv import load_dotenv
 from google.oauth2.service_account import Credentials
 from googleapiclient import discovery
-from constants import SCOPES
-from pprint import pprint
-
+from travel_budget.constants import SCOPES
 
 load_dotenv()
 
@@ -38,7 +36,7 @@ def get_list_obj(service):
     return response.execute()
 
 
-def clear_disk(service, spreadsheets):
+def clear_disk(service, sprseadsheets):
     for spreadsheet in spreadsheets:
         response = service.files().delete(fileId=spreadsheet['id'])
         response.execute()
